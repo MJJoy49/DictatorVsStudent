@@ -1,0 +1,140 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color:rgb(32, 32, 32);
+}
+
+#mobile-controls {
+    position: fixed;
+    bottom: 40%;
+    width: 100%;
+    display: none; 
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 10;
+}
+
+#mobile-controls .left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 5px;
+}
+
+#mobile-controls .right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 5px;
+}
+
+svg {
+    opacity: 30%;
+}
+
+#mobile-controls button {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+}
+
+#mobile-controls button:active {
+    background-color: #555;
+}
+
+
+#score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #fff;
+    z-index: 10;
+}
+
+#game-over {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
+}
+
+#game-over #final-score {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#restart {
+    font-size: 18px;
+    padding: 10px 20px;
+    background: #f50529;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#restart:hover {
+    background: #d3001e;
+}
+
+
+@media (max-width: 425px) {
+    #mobile-controls {
+        display: flex; 
+    }
+
+
+    #game-over #final-score {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    #score{
+        font-size: 18px;
+    }
+
+    #mobile-controls button {
+        width: 25px; 
+        height: 30px;
+    }
+}
+
+
+@media (min-width: 426px) and (max-width: 768px) {
+    #mobile-controls {
+        display: flex; 
+    }
+
+    #game-over #final-score {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    #score{
+        font-size: 20px;
+    }
+
+    #mobile-controls button {
+        width: 50px; 
+        height: 60px;
+    }
+}
