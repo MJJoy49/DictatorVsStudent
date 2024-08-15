@@ -318,7 +318,7 @@ class Grid {
             
 
             if (innerWidth <= 425) {
-                this.velocity.y =25;
+                this.velocity.y =30;
             }
 
             else if (innerWidth <= 768 && innerWidth >= 424) {
@@ -462,7 +462,7 @@ function animate() {
 
 
         if (innerWidth <= 425) {
-            if (frame % 200 == 0 && grid.enemy.length > 0) {
+            if (frame % 180 == 0 && grid.enemy.length > 0) {
                 grid.enemy[Math.floor(Math.random() * grid.enemy.length)].shoot(enemyBullets);
             }
         }
