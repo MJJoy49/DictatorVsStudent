@@ -282,11 +282,11 @@ class Grid {
         }
 
         else if (innerWidth <= 768 && innerWidth >= 424) {
-            this.velocity.x =this.velocity.x+4;
+            this.velocity.x =this.velocity.x+3;
         }
         
         else {
-            this.velocity.x =this.velocity.x+5;
+            this.velocity.x =this.velocity.x+4;
         }
 
         this.enemy = [];
