@@ -368,6 +368,7 @@ let gameOver=false;
 function restartGame() {
     over.pause();
     over.currentTime = 0;
+    scoreElement.style.display="block";
     player.position.x = canvas.width / 2 - player.width / 2; 
     innerWidth <= 425 ?  player.position.y = canvas.height -50 :  player.position.y = canvas.height -85;
 
@@ -423,6 +424,7 @@ function animate() {
             enemyBullet.position.x <= playerCenterX + collisionMargin
         ) {
             player.opacity = 0;
+            scoreElement.style.display="none";
             
             setTimeout(() => {
                 gameOver = true;
