@@ -462,7 +462,7 @@ function animate() {
 
 
         if (innerWidth <= 425) {
-            if (frame % 200 == 0 && grid.enemy.length > 0) {
+            if (frame % 250 == 0 && grid.enemy.length > 0) {
                 grid.enemy[Math.floor(Math.random() * grid.enemy.length)].shoot(enemyBullets);
             }
         }
@@ -486,7 +486,6 @@ function animate() {
         grid.enemy.forEach((enemy, i) => {
             enemy.update({ velocity: grid.velocity });
 
-            // Collision detection between player and enemy
             if (
                 enemy.position.y + enemy.height >= player.position.y &&
                 enemy.position.x + enemy.width >= player.position.x &&
@@ -555,7 +554,7 @@ function animate() {
     
 
     if (innerWidth <= 425) {
-        if (frame%180==0) {
+        if (frame%250==0) {
             grid.push(new Grid())
             
         }
