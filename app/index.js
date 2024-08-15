@@ -462,7 +462,7 @@ function animate() {
 
 
         if (innerWidth <= 425) {
-            if (frame % 50 == 0 && grid.enemy.length > 0) {
+            if (frame % 80 == 0 && grid.enemy.length > 0) {
                 grid.enemy[Math.floor(Math.random() * grid.enemy.length)].shoot(enemyBullets);
             }
         }
